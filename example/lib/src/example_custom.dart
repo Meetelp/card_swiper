@@ -138,7 +138,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
       controller: _controller,
       layout: _layout,
       outer: _outer,
-      itemHeight: 240.0,
+      itemHeight: MediaQuery.of(context).size.height * .8,
       viewportFraction: _viewportFraction,
       autoplayDelay: _autoplayDelay,
       loop: _loop,
@@ -146,7 +146,6 @@ class _ExampleCustomState extends State<ExampleCustom> {
       itemBuilder: _buildItem,
       itemCount: _itemCount,
       scrollDirection: _scrollDirection,
-      axisDirection: _axisDirection,
       autoplayDisableOnInteraction: _autoplayDisableOnInteraction,
     );
   }
@@ -159,7 +158,7 @@ class _ExampleCustomState extends State<ExampleCustom> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           color: Colors.black87,
           child: SizedBox(
-            height: 280.0,
+            height: MediaQuery.of(context).size.height * .85,
             width: double.infinity,
             child: buildSwiper(),
           ),
